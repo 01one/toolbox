@@ -33,7 +33,6 @@ pwd
 ## Create a Systemd Service
 
 ```bash
-# Create a service file
 sudo nano /etc/systemd/system/my_python_server.service
 ```
 
