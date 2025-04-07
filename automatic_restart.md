@@ -68,7 +68,7 @@ cat /run/systemd/shutdown/scheduled
 
 # View scheduled shutdown in human-readable time format
 awk -F= '/^USEC=/ { print $2 }' /run/systemd/shutdown/scheduled | awk '{ print strftime("%Y-%m-%d %H:%M:%S", $1 / 1000000) }'
-
+```
 
 
 
