@@ -51,6 +51,27 @@ sudo shutdown -r 23:00
 sudo shutdown -c
 ```
 
+### Checking Scheduled Shutdowns/Restarts
+
+```bash
+# Check if a shutdown/restart is scheduled
+cat /run/systemd/shutdown/scheduled
+
+# Cancel a scheduled shutdown/restart
+sudo shutdown -c
+
+# Schedule a restart at specific time (e.g., 11:00 PM)
+# sudo shutdown -r 23:00
+
+# view the scheduled shutdown if there is any
+cat /run/systemd/shutdown/scheduled
+
+# View scheduled shutdown in human-readable time format
+awk -F= '/^USEC=/ { print $2 }' /run/systemd/shutdown/scheduled | awk '{ print strftime("%Y-%m-%d %H:%M:%S", $1 / 1000000) }'
+
+
+
+
 ## Method 3: Using systemd Timer (Modern Systems)
 
 For systems using systemd, you can create a timer:
