@@ -140,3 +140,11 @@ systemctl list-timers
 - Always test restart schedules during non-critical hours
 - Consider setting up monitoring to verify restarts occur as expected
 - For production systems, implement proper service recovery mechanisms
+- For shutdown without restart, replace `-r` with `-h` in  shutdown commands for example
+```bash
+# Restart at a specific time today
+sudo shutdown -r 23:00
+
+# Shutdown at a specific time today (no restart)
+sudo shutdown -h 23:00
+```
