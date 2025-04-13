@@ -61,3 +61,12 @@ for f in *.wav; do
   ffmpeg -i "$f" -q:a 0 "converted/${f%.wav}.mp3"
 done
 ```
+
+
+## start from 5 second
+```bash
+ffmpeg -ss 5 -i input.mp3 -acodec copy output.mp3
+```
+```bash
+ffmpeg -ss 5 -i input.mp3 -vn -acodec libmp3lame -b:a 192k output.mp3
+```
