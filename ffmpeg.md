@@ -50,3 +50,14 @@ ffmpeg -i input_video.mp4 -vf "scale=iw*min(240/iw\,320/ih):ih*min(240/iw\,320/i
 
 
 ## These commands assume you have opened the terminal in the video directory.
+
+
+
+
+# Bach convert from the same folder all wav file to mp3 and same in a folder name converted
+```bash
+mkdir -p converted
+for f in *.wav; do
+  ffmpeg -i "$f" -q:a 0 "converted/${f%.wav}.mp3"
+done
+```
