@@ -24,6 +24,11 @@ upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage
 ```bash
 cat /sys/class/power_supply/BAT0/capacity
 ```
+### power profile
+```bash
+powerprofilesctl get
+```
+
 
 
 #### GUI settings
