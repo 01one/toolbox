@@ -20,6 +20,12 @@ sudo tee /sys/class/backlight/intel_backlight/brightness <<< 0
 upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage
 ```
 
+
+```bash
+cat /sys/class/power_supply/BAT0/capacity
+```
+
+
 #### GUI settings
 Use the GUI to turn it on or off.
 
