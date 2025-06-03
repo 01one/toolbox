@@ -80,7 +80,7 @@ sudo nano /etc/ssh/sshd_config
 ListenAddress 127.0.0.1
 
 # Restart service
-sudo systemctl restart sshd
+sudo systemctl restart ssh
 ```
 
 ### Stop SSH Service
