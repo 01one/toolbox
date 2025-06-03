@@ -66,7 +66,7 @@ KbdInteractiveAuthentication yes
 
 5. Apply changes:
 ```bash
-sudo systemctl restart sshd
+sudo systemctl restart ssh
 ```
 
 ## Restrict or Disable SSH
