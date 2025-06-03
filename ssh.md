@@ -9,7 +9,7 @@ sudo apt update
 sudo apt install openssh-server
 
 # Enable SSH service
-sudo systemctl enable sshd
+sudo systemctl enable ssh
 ```
 
 ### Restrict SSH to Local IP
@@ -21,7 +21,7 @@ sudo nano /etc/ssh/sshd_config
 ListenAddress 192.168.1.100  # Replace with your local IP
 
 # Restart the service
-sudo systemctl restart sshd
+sudo systemctl restart ssh
 ```
 
 ### Connect to SSH Server
